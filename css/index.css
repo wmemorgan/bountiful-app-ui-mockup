@@ -157,10 +157,12 @@ p {
 .site-header {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: normal;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  color: #ffffff;
   background: #022140;
+  padding: 10px 30px;
   top: 0;
   position: fixed;
   z-index: 2;
@@ -168,7 +170,7 @@ p {
 }
 .site-header .logo {
   font-size: 4.2rem;
-  margin: 15px auto;
+  color: #ffffff;
 }
 @media (max-width: 500px) {
   .site-header .logo {
