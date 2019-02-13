@@ -9,6 +9,7 @@ let pageElements = {
   buttons: document.querySelectorAll('button'),
   links: document.querySelectorAll('a'),
   paragraph: document.querySelectorAll('p'),
+  lists: document.querySelectorAll('li'),
   body: document.querySelector('body'),
   logo: document.querySelector('.logo')
 }
@@ -97,22 +98,22 @@ const mapFontStyle = (pageElements, fontStyles) => {
   pageElements.heading.forEach(elem => elem.style.fontFamily = fontStyles.heading)
   pageElements.paragraph.forEach(elem => elem.style.fontFamily = fontStyles.text)
   pageElements.links.forEach(elem => elem.style.fontFamily = fontStyles.text)
+  pageElements.lists.forEach(elem => elem.style.fontFamily = fontStyles.text)
   pageElements.logo = fontStyles.logo
 }
 
 // Invoke functions
-if (location.path === '/') {
-  const colorOptionBtn = document.querySelectorAll(".color-selector button")
-  console.log(colorOptionBtn)
-  colorOptionBtn[0].addEventListener('click', () => mapColorScheme(pageElements, colorScheme1))
-  colorOptionBtn[1].addEventListener('click', () => mapColorScheme(pageElements, colorScheme2))
-  colorOptionBtn[2].addEventListener('click', () => mapColorScheme(pageElements, colorScheme3))
+const colorOptionBtn = document.querySelectorAll(".color-selector button")
+console.log(colorOptionBtn)
+colorOptionBtn[0].addEventListener('click', () => mapColorScheme(pageElements, colorScheme1))
+colorOptionBtn[1].addEventListener('click', () => mapColorScheme(pageElements, colorScheme2))
+colorOptionBtn[2].addEventListener('click', () => mapColorScheme(pageElements, colorScheme3))
 
-  const fontOptionBtn = document.querySelectorAll(".font-selector button")
-  console.log(fontOptionBtn)
-  fontOptionBtn[0].addEventListener('click', () => mapFontStyle(pageElements, fontOption1))
-  fontOptionBtn[1].addEventListener('click', () => mapFontStyle(pageElements, fontOption2))
-  fontOptionBtn[2].addEventListener('click', () => mapFontStyle(pageElements, fontOption3))
-}
+const fontOptionBtn = document.querySelectorAll(".font-selector button")
+console.log(fontOptionBtn)
+fontOptionBtn[0].addEventListener('click', () => mapFontStyle(pageElements, fontOption1))
+fontOptionBtn[1].addEventListener('click', () => mapFontStyle(pageElements, fontOption2))
+fontOptionBtn[2].addEventListener('click', () => mapFontStyle(pageElements, fontOption3))
+
 
 
