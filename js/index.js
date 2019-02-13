@@ -1,8 +1,6 @@
 // Design Selector
 //==== Color Selector
 //Identify elements for color scheme
-//Query select: header, footer, headings, default text, buttons, nav-links, hyperlinks, dividers
-
 let pageElements = {
   header: document.querySelector('header'),
   footer: document.querySelector('footer'),
@@ -18,8 +16,6 @@ let pageElements = {
 console.log(pageElements.header)
 
 //Parse the color palette options
-//Create object with key names: primary-color, primary-dark, primary-light, accent, emphasis
-//secondary, dark-text, light-text, secondary-text, primary-bg-shading, secondary-bg;
 const colorScheme1 = {
   "primary-color": "#265077", 
   "primary-dark": "#022140", 
@@ -63,7 +59,6 @@ const colorScheme3 = {
 }
 
 //Match the element with the appropriate color
-//Create a function that maps a color key/value pair to specified element
 const mapColorScheme = (pageElements, palette) => {
   pageElements.header.style.backgroundColor = palette['primary-dark']
   pageElements.header.style.color = palette['light-text']
@@ -77,18 +72,8 @@ const mapColorScheme = (pageElements, palette) => {
   pageElements.body.style.color = palette['dark-text']
 }
 
-const colorOptionBtn = document.querySelectorAll(".color-selector button")
-console.log(colorOptionBtn)
-colorOptionBtn[0].addEventListener('click', () => mapColorScheme(pageElements, colorScheme1))
-colorOptionBtn[1].addEventListener('click', () => mapColorScheme(pageElements, colorScheme2))
-colorOptionBtn[2].addEventListener('click', () => mapColorScheme(pageElements, colorScheme3))
-
 //==== Font Selector
 //Identify text elements for font selector
-//Query select h1 - h4, p, nav-links, a tags, logo
-
-//Parse the font pairing options
-//Create object with key names: heading, default-text
 let fontOption1 = {
   heading: "Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
   text: "Lato, Helvetica, Sans-Serif",
@@ -108,7 +93,6 @@ let fontOption3 = {
 }
 
 //Match the element with the appropriate font family
-//Create a function that maps a font key/value pair to specified element
 const mapFontStyle = (pageElements, fontStyles) => {
   pageElements.heading.forEach(elem => elem.style.fontFamily = fontStyles.heading)
   pageElements.paragraph.forEach(elem => elem.style.fontFamily = fontStyles.text)
@@ -116,8 +100,19 @@ const mapFontStyle = (pageElements, fontStyles) => {
   pageElements.logo = fontStyles.logo
 }
 
-const fontOptionBtn = document.querySelectorAll(".font-selector button")
-console.log(fontOptionBtn)
-fontOptionBtn[0].addEventListener('click', () => mapFontStyle(pageElements, fontOption1))
-fontOptionBtn[1].addEventListener('click', () => mapFontStyle(pageElements, fontOption2))
-fontOptionBtn[2].addEventListener('click', () => mapFontStyle(pageElements, fontOption3))
+// Invoke functions
+if (location.path === '/') {
+  const colorOptionBtn = document.querySelectorAll(".color-selector button")
+  console.log(colorOptionBtn)
+  colorOptionBtn[0].addEventListener('click', () => mapColorScheme(pageElements, colorScheme1))
+  colorOptionBtn[1].addEventListener('click', () => mapColorScheme(pageElements, colorScheme2))
+  colorOptionBtn[2].addEventListener('click', () => mapColorScheme(pageElements, colorScheme3))
+
+  const fontOptionBtn = document.querySelectorAll(".font-selector button")
+  console.log(fontOptionBtn)
+  fontOptionBtn[0].addEventListener('click', () => mapFontStyle(pageElements, fontOption1))
+  fontOptionBtn[1].addEventListener('click', () => mapFontStyle(pageElements, fontOption2))
+  fontOptionBtn[2].addEventListener('click', () => mapFontStyle(pageElements, fontOption3))
+}
+
+
