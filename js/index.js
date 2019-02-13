@@ -18,45 +18,45 @@ console.log(pageElements.header)
 
 //Parse the color palette options
 const colorScheme1 = {
-  "primary-color": "#265077", 
-  "primary-dark": "#022140", 
-  "primary-light": "#C5CAE9", 
-  accent: "#51A7F8", 
-  emphasis: "#212121",
+  "primary-color": "#50645B", 
+  "primary-dark": "#3D544C", 
+  "primary-light": "#C5C3BB", 
+  accent: "#77877C", 
+  emphasis: "#03100D",
   secondary: "#1E4258", 
-  "dark-text": "#595959", 
-  "light-text": "#FFFFFF", 
+  "dark-text": "#03100D", 
+  "light-text": "#E9E9D8", 
   "secondary-text": "#CCC", 
-  "primary-bg-shading": "#FCFCFC", 
-  "secondary-bg": "#f0f0f8"
+  "primary-bg-shading": "#03100D", 
+  "secondary-bg": "C5C3BB"
 }
 
 const colorScheme2 = {
-  "primary-color": "#3F51B5",
-  "primary-dark": "#303F9F",
-  "primary-light": "#C5CAE9",
-  accent: "#03A9F4",
+  "primary-color": "#4D2838",
+  "primary-dark": "#4D2838",
+  "primary-light": "#B2A6AF",
+  accent: "#AE0B18",
   emphasis: "#212121",
   secondary: "#757575",
-  "dark-text": "#595959",
-  "light-text": "#FFFFFF",
-  "secondary-text": "CCC",
-  "primary-bg-shading": "#FCFCFC",
-  "secondary-bg": "#31302e"
+  "dark-text": "#08030D",
+  "light-text": "#FDFCFC",
+  "secondary-text": "#CCC",
+  "primary-bg-shading": "#837586",
+  "secondary-bg": "#EBA9A1"
 }
 
 const colorScheme3 = {
-  "primary-color": "#464866",
-  "primary-dark": "#25274D",
+  "primary-color": "#1363A8",
+  "primary-dark": "#0F5080",
   "primary-light": "#AAABB8",
-  accent: "#2E9CCA",
+  accent: "#D9D7A1",
   emphasis: "#212121",
   secondary: "#1E4258",
   "dark-text": "#212121",
-  "light-text": "#FFFFFF",
+  "light-text": "#D1DAE5",
   "secondary-text": "#CCC",
-  "primary-bg-shading": "#FCFCFC",
-  "secondary-bg": "#f0f0f8"
+  "primary-bg-shading": "#4195D2",
+  "secondary-bg": "#7F969F"
 }
 
 //Match the element with the appropriate color
@@ -69,7 +69,8 @@ const mapColorScheme = (pageElements, palette) => {
   pageElements.links.forEach(elem => elem.style.color = palette['accent'])
   pageElements.navLinks.forEach(elem => elem.style.color = palette['light-text'])
   pageElements.buttons.forEach(elem => elem.style.backgroundColor = palette['accent'])
-  pageElements.buttons.forEach(elem => elem.style.color = palette['light-text'])
+  pageElements.buttons.forEach(elem => elem.style.color = palette['primary-dark'])
+  document.querySelectorAll('.service-item').forEach(elem => elem.style.backgroundColor = palette['primary-light'])
   pageElements.body.style.color = palette['dark-text']
 }
 
