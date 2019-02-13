@@ -2,8 +2,8 @@
 .site-header {
   width: 100%;
   .flex(@direction: column; @align:center);
-  background: @nav-bg;
-  border-bottom: 2px solid @nav-border;
+  background: @header-bg;
+  //border-bottom: 2px solid @nav-border;
   top: 0;
   position: fixed;
   z-index: 2;
@@ -27,9 +27,9 @@
       text-decoration: none;
       font-size: 1.5rem;
       font-weight: semi-bold;
-      color: @nav-font;
+      color: @header-font-color;
       white-space: nowrap;
-      .hoverEffect(@nav-bg;@nav-font);
+      //.hoverEffect(@nav-bg;@nav-font);
 
       @media @phone {
         margin: 0 2.78vw;

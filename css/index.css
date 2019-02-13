@@ -154,6 +154,47 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.site-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  background: #022140;
+  top: 0;
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+}
+.site-header .logo {
+  font-size: 4.2rem;
+  margin: 15px auto;
+}
+@media (max-width: 500px) {
+  .site-header .logo {
+    font-size: 4rem;
+  }
+}
+.site-header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: normal;
+  margin-bottom: 10px;
+}
+.site-header nav a {
+  margin: 0 1.39vw;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: semi-bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+@media (max-width: 500px) {
+  .site-header nav a {
+    margin: 0 2.78vw;
+  }
+}
 footer {
   color: #ffffff;
   background: #022140;
