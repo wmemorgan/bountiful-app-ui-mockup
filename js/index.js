@@ -10,7 +10,9 @@ let pageElements = {
   navLinks: document.querySelectorAll('nav a'),
   buttons: document.querySelectorAll('button'),
   links: document.querySelectorAll('a'),
-  defaultText: document.querySelector('body')
+  paragraph: document.querySelectorAll('p'),
+  body: document.querySelector('body'),
+  logo: document.querySelector('.logo')
 }
 
 console.log(pageElements.header)
@@ -72,7 +74,7 @@ const mapColorScheme = (pageElements, palette) => {
   pageElements.navLinks.forEach(elem => elem.style.color = palette['light-text'])
   pageElements.buttons.forEach(elem => elem.style.backgroundColor = palette['accent'])
   pageElements.buttons.forEach(elem => elem.style.color = palette['light-text'])
-  pageElements.defaultText.style.color = palette['dark-text']
+  pageElements.body.style.color = palette['dark-text']
 }
 
 const colorOptionBtn = document.querySelectorAll(".color-selector button")
@@ -87,6 +89,35 @@ colorOptionBtn[2].addEventListener('click', () => mapColorScheme(pageElements, c
 
 //Parse the font pairing options
 //Create object with key names: heading, default-text
+let fontOption1 = {
+  heading: "Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  text: "Lato, Helvetica, Sans-Serif",
+  logo: "Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+}
+
+let fontOption2 = {
+  heading: "Roboto Slab, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  text: "'Open Sans', Helvetica, Sans-Serif",
+  logo: "Roboto Slab, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+}
+
+let fontOption3 = {
+  heading: "Lora, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  text: "Muli, Helvetica, Sans-Serif",
+  logo: "Lora, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+}
 
 //Match the element with the appropriate font family
 //Create a function that maps a font key/value pair to specified element
+const mapFontStyle = (pageElements, fontStyles) => {
+  pageElements.heading.forEach(elem => elem.style.fontFamily = fontStyles.heading)
+  pageElements.paragraph.forEach(elem => elem.style.fontFamily = fontStyles.text)
+  pageElements.links.forEach(elem => elem.style.fontFamily = fontStyles.text)
+  pageElements.logo = fontStyles.logo
+}
+
+const fontOptionBtn = document.querySelectorAll(".font-selector button")
+console.log(fontOptionBtn)
+fontOptionBtn[0].addEventListener('click', () => mapFontStyle(pageElements, fontOption1))
+fontOptionBtn[1].addEventListener('click', () => mapFontStyle(pageElements, fontOption2))
+fontOptionBtn[2].addEventListener('click', () => mapFontStyle(pageElements, fontOption3))
