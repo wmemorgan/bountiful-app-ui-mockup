@@ -254,6 +254,7 @@ p {
   margin: 10px 0;
   padding: 5px;
   border-radius: 15px;
+  cursor: pointer;
 }
 .home {
   margin: 20px auto;
