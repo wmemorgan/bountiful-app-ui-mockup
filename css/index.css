@@ -365,9 +365,17 @@ p {
   border: 1px solid black;
   border-radius: 5px;
   text-align: center;
-  background: white;
+  color: #ffffff;
+  background: #51a7f8;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: transform .3s;
+}
+.services .services-list .svc-button:hover {
+  color: #ffffff;
+  background: #022140;
+  border: 1px solid #022140;
+  transform: scale(1.15);
 }
 .services .about-services {
   display: flex;
@@ -376,6 +384,7 @@ p {
 }
 .services .about-services ul {
   list-style-type: disc;
+  font-size: 1.6rem;
   margin: 2.5vw;
 }
 .services .about-services-text,
