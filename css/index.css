@@ -203,8 +203,6 @@ p {
   flex-direction: column;
   justify-content: normal;
   align-items: center;
-  bottom: 0;
-  position: fixed;
   padding: 10px;
   color: #ffffff;
   background: #022140;
@@ -240,4 +238,69 @@ p {
     margin: 0 2.78vw;
     text-align: center;
   }
+}
+.home {
+  margin: 20px auto;
+  padding: 10px 50px;
+}
+.home * h2 {
+  margin: 5px 0;
+}
+.home * p {
+  padding: 5px 0;
+}
+.home .banner {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.home .banner .hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .home .banner .hero-image-wrapper img {
+    border-radius: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .home .banner .hero-image-wrapper {
+    height: 30%;
+  }
+}
+.home .introduction {
+  display: flex;
+  padding-top: 20px;
+  border-top: 2px solid #022140;
+}
+.home .introduction .intro-column {
+  flex: 0 0 48%;
+}
+.home .introduction .intro-column:first-child {
+  margin-left: 0;
+}
+.home .middle-image-wrapper {
+  margin: 20px auto;
+}
+.home .product-and-services {
+  display: flex;
+  margin: 30px 0;
+  padding-top: 20px;
+  border-bottom: 2px solid #022140;
+}
+.home .product-and-services .p-and-s-column {
+  flex: 0 0 33%;
+}
+.home .contact-info {
+  margin: 20px 0;
+}
+.home .contact-info address {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.home .contact-info address a {
+  color: black;
+  text-decoration: none;
+}
+.home .contact-info address a:hover {
+  text-decoration: underline;
 }
