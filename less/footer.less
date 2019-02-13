@@ -1,11 +1,38 @@
 // Footer Styles
-footer {
-  color: @footerFontColor;
-  background: @footerBg;
-  padding: 20px 0;
-  border: 1px double #e0e0e0;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page-footer {
+    width: 100%;
+    .flex(@direction: column; @align:center);
+    bottom: 0;
+    position: fixed;
+    padding: 10px;
+    color: @footerFontColor;
+    background: @footerBg;
+
+    nav {
+    .flex(@justify:space-evenly);
+    width: 100%;
+    margin: 20px 0;
+    @media @phone {
+      .flex(@direction:column;@align:center);
+    }
+
+    a {
+      margin: 0 1.39vw;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: semi-bold;
+      color: @footerFontColor;
+      white-space: nowrap;
+    //   .hoverEffect(@footerBg;@footerFontColor);
+
+      @media @phone {
+        width: 95%;
+        padding: 20px 0;
+        margin: 0 2.78vw;
+        text-align: center;
+        //border-bottom: 1px solid @main-border-color;
+      }
+
+    }
+  }
 }
