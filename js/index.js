@@ -66,7 +66,7 @@ const mapColorScheme = (pageElements, palette) => {
   pageElements.footer.style.backgroundColor = palette['primary-dark']
   pageElements.header.style.color = palette['light-text']
   pageElements.heading.forEach(elem => elem.style.color = palette['primary'])
-  pageElements.links.forEach(elem => elem.style.color = palette['accent'])
+  pageElements.links.forEach(elem => elem.style.color = palette['primary-bg-shading'])
   pageElements.navLinks.forEach(elem => elem.style.color = palette['light-text'])
   pageElements.buttons.forEach(elem => elem.style.backgroundColor = palette['accent'])
   pageElements.buttons.forEach(elem => elem.style.color = palette['primary-dark'])
@@ -83,15 +83,15 @@ let fontOption1 = {
 }
 
 let fontOption2 = {
-  heading: "Roboto Slab, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  heading: "Roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
   text: "'Open Sans', Helvetica, Sans-Serif",
-  logo: "Roboto Slab, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+  logo: "Roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
 }
 
 let fontOption3 = {
-  heading: "Lora, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
-  text: "Muli, Helvetica, Sans-Serif",
-  logo: "Lora, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+  heading: "'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  text: "'Open Sans', Helvetica, Sans-Serif",
+  logo: "'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
 }
 
 //Match the element with the appropriate font family
