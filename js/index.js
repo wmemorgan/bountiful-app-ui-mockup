@@ -6,7 +6,7 @@ let pageElements = {
   footer: document.querySelector('footer'),
   heading: document.querySelectorAll('h1, h2, h3, h4'),
   navLinks: document.querySelectorAll('nav a'),
-  buttons: document.querySelectorAll('button'),
+  buttons: document.querySelectorAll('button, .button'),
   links: document.querySelectorAll('a'),
   paragraph: document.querySelectorAll('p'),
   lists: document.querySelectorAll('li'),
