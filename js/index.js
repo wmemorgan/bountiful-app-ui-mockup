@@ -14,35 +14,35 @@ let pageElements = {
   logo: document.querySelector('.logo')
 }
 
-console.log(pageElements.header)
+console.log(pageElements.logo)
 
 //Parse the color palette options
 const colorScheme1 = {
-  "primary-color": "#50645B", 
-  "primary-dark": "#3D544C", 
-  "primary-light": "#C5C3BB", 
-  accent: "#77877C", 
+  "primary-color": "#1363A8", 
+  "primary-dark": "#0F5080", 
+  "primary-light": "#D1DAE5", 
+  accent: "#D9D7A1", 
   emphasis: "#03100D",
   secondary: "#1E4258", 
-  "dark-text": "#03100D", 
-  "light-text": "#E9E9D8", 
+  "dark-text": "#212121", 
+  "light-text": "#FFFFFF", 
   "secondary-text": "#CCC", 
-  "primary-bg-shading": "#03100D", 
-  "secondary-bg": "C5C3BB"
+  "primary-bg-shading": "#4195D2", 
+  "secondary-bg": "#7F969F"
 }
 
 const colorScheme2 = {
-  "primary-color": "#4D2838",
-  "primary-dark": "#4D2838",
-  "primary-light": "#B2A6AF",
-  accent: "#AE0B18",
-  emphasis: "#212121",
-  secondary: "#757575",
-  "dark-text": "#08030D",
-  "light-text": "#FDFCFC",
+  "primary-color": "#1363A8",
+  "primary-dark": "#0F5080",
+  "primary-light": "#D1DAE5",
+  accent: "#FF7F50",
+  emphasis: "#03100D",
+  secondary: "#1E4258",
+  "dark-text": "#595959",
+  "light-text": "#FFFFFF",
   "secondary-text": "#CCC",
-  "primary-bg-shading": "#837586",
-  "secondary-bg": "#EBA9A1"
+  "primary-bg-shading": "#4195D2",
+  "secondary-bg": "#7F969F"
 }
 
 const colorScheme3 = {
@@ -77,9 +77,9 @@ const mapColorScheme = (pageElements, palette) => {
 //==== Font Selector
 //Identify text elements for font selector
 let fontOption1 = {
-  heading: "Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
-  text: "Lato, Helvetica, Sans-Serif",
-  logo: "Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+  heading: "Varela, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
+  text: "Open Sans, Helvetica, Sans-Serif",
+  logo: "Varela, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
 }
 
 let fontOption2 = {
@@ -100,7 +100,7 @@ const mapFontStyle = (pageElements, fontStyles) => {
   pageElements.paragraph.forEach(elem => elem.style.fontFamily = fontStyles.text)
   pageElements.links.forEach(elem => elem.style.fontFamily = fontStyles.text)
   pageElements.lists.forEach(elem => elem.style.fontFamily = fontStyles.text)
-  pageElements.logo = fontStyles.logo
+  pageElements.logo.style.fontFamily = fontStyles.logo
 }
 
 // Invoke functions
